@@ -1,19 +1,65 @@
-# React + Vite
+# DZTech Store 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive e-commerce web application built using **React.js** and **Redux Toolkit** for managing ambient lighting and home decor products.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 👤 Student Information
+* **Name:** BOUAKKAZ Madjeda
+* **Course:** WAMD (Web Application Development) - ENSTA
+* **Academic Year:** 2026
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 📌 Project Overview
+**DZTech Store** (LUMASPACE) provides an intuitive online shopping experience where users can browse ambient lighting products, filter by categories or search terms, and manage their shopping cart dynamically in real time using a Redux global store.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
+* **React.js** (Vite setup) — Component-based UI rendering
+* **Redux Toolkit & React-Redux** — Centralized global state management
+* **JavaScript (ES6+)** — Application logic
+* **CSS3** — Custom modern dark-theme layout & responsive UI
+* **Git & GitHub** — Version control
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🏗️ Main React Components
+* **`App.jsx`**: The root component managing layout, search/category state, and rendering overall structure.
+* **`Navbar.jsx`**: Top navigation displaying brand logo, navigation links, and dynamic cart item count.
+* **`ProductCard.jsx`**: Renders individual product cards with images, details, pricing in Algerian Dinars (DA), and an "Add +" action button.
+* **`CartDrawer.jsx`**: A sliding side panel showing selected products, quantity controls, grand total calculation, and checkout actions.
+* **`CartItem.jsx`**: Handles item-level cart actions like increasing, decreasing, or removing items.
+
+---
+
+## 🔄 Redux State Management
+Global state is managed via **Redux Toolkit** (`store.js` and `cartSlice.js`):
+* **Cart Items**: Array of products added to the cart, including their quantities.
+* **Cart Total**: Dynamic calculation of the total price in DA based on items and quantities.
+* **Cart Count**: Total number of items displayed in the `Navbar`.
+* **Dispatched Actions**:
+  * `addToCart`: Adds a product or increments quantity if already present.
+  * `removeFromCart`: Removes a product from the cart completely.
+  * `increaseQuantity`: Increases item quantity by 1.
+  * `decreaseQuantity`: Decreases item quantity or removes item if quantity reaches 0.
+  * `clearCart`: Resets the cart to empty.
+
+---
+
+## 🌟 Key Features
+* 📦 **Product Catalog**: Browsable products complete with images, categories, and prices.
+* 🔎 **Search & Filter**: Search products by name and filter by category dynamically.
+* 🛒 **Dynamic Shopping Cart**: Real-time reactive updates across components without full page reloads.
+* 💰 **Currency Formatting**: Prices formatted in Algerian Dinars (`DA`).
+* 📱 **Responsive Design**: Works on desktop, tablet, and mobile screens.
+
+---
+
+## 🚀 How to Run the Application
+
+### 1. Clone the repository
+```bash
+git clone [https://github.com/BOUAKKAZ-Madjeda/E-commerceApp.git](https://github.com/BOUAKKAZ-Madjeda/E-commerceApp.git)
+cd dztech-store
